@@ -24,7 +24,7 @@ public class XWing : MonoBehaviour
         if (moveInput != Vector2.zero) /* Esto hará que mire en la dirección en la que se jueve, para rotarlo vaya */
         {
             // Esto conserva la orientación tras soltar la tecla hacia donde estaba la ultima vez su UP, osea, el eje y en positivo, que se ha desorientado en su posición local
-            ship.up = moveInput;
+            //ship.up = moveInput;
         }
 
         checkCollision();
