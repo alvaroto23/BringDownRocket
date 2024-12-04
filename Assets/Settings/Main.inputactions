@@ -83,6 +83,45 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "ShootSpawner",
+            "id": "7d0a3265-597a-41dc-bfce-610b337d9423",
+            "actions": [
+                {
+                    "name": "Shoot",
+                    "type": "Button",
+                    "id": "f30afd2a-30a5-4c4b-a2e3-5e85de917486",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1ab9ccac-622c-4aee-aa6c-8a5a8c78e66a",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "78e1ceaa-0d34-4cf5-a893-0ba498d410ee",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
