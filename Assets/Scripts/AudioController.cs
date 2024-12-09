@@ -6,37 +6,28 @@ using UnityEngine.Audio;
 public class AudioController : MonoBehaviour
 {
 
-    private AudioSource audioController;
-    [SerializeField] private AudioClip clip;
     [SerializeField] private AudioMixer mixer;
-
+    private bool pauseGame = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            audioController.Play();
-        }
-        
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            audioController.PlayOneShot(clip);
-        }
-        
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            audioController.Stop();
+            pauseGame =! pauseGame;
         }
         
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            audioController.Pause();
-        }
-
-        if (Input.GetKeyDown(KeyCode.V))
+        if (pauseGame)
         {
             mixer.SetFloat("LowpassFreq", 500);
+            Time.timeScale = 0f;
+        }
+
+        else if (!pauseGame)
+        {
+            mixer.SetFloat("LowpassFreq", 22000);
+            Time.timeScale = 1f;
         }
 
 
