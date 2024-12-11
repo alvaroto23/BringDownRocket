@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Audio;
 
-public class gameController : MonoBehaviour
+public class GameController : MonoBehaviour
 {
 
     [SerializeField] private ShootSpawner shooter;
