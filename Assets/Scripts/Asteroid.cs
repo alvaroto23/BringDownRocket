@@ -7,17 +7,13 @@ public class Asteroid : MonoBehaviour
 {
 
     [SerializeField] private float asteroidSpeed = 2;
-
+    private GameObject Collision;
     void Update()
     {
 
         transform.position += new Vector3(0, -asteroidSpeed * Time.deltaTime, 0);
         //transform.Rotate(0, 0, rotationDirection * Time.deltaTime);
-
-        //if (transform.position.y >= 10)
-        //{
-        //    Destroy(gameObject);
-        //}
+        
 
     }
 }
