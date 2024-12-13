@@ -7,7 +7,7 @@ using static UnityEngine.GridBrushBase;
 public class Asteroid : MonoBehaviour
 {
 
-    [SerializeField] private float asteroidSpeed = 2;
+    [SerializeField] private float asteroidSpeed = 3;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

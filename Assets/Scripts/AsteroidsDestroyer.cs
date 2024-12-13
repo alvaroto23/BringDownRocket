@@ -8,6 +8,7 @@ public class AsteroidsDestroyer : MonoBehaviour
     { 
         if (collision.gameObject.CompareTag("Asteroid"))
         {
+            print("Fallo de destruccion");
             Destroy(collision.gameObject);
         }
 
