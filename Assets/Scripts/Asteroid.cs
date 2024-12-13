@@ -9,8 +9,9 @@ public class Asteroid : MonoBehaviour
 
     [SerializeField] private float asteroidSpeed = 2;
 
-    private void OnCollisionEnter2D(Collision collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        print("Colision detectada");
         if (collision.gameObject.CompareTag("XWing"))
         {
             Destroy(collision.gameObject);
@@ -18,11 +19,11 @@ public class Asteroid : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Shoot"))
         {
+            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
 
     }
-
 
     void Update()
     {

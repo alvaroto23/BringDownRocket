@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AsteroidsDestroyer : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collision collision)
-    {
+    private void OnTriggerEnter2D(Collider2D collision)
+    { 
         if (collision.gameObject.CompareTag("Asteroid"))
         {
             Destroy(collision.gameObject);
