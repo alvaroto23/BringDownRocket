@@ -8,6 +8,8 @@ public class AsteroidsSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject asteroid;
     [SerializeField] private float spawningSpeed = 5;
+    [SerializeField] private AudioSource asteroidSound;
+    [SerializeField] private AudioClip asteroidExplosion;
     private float sumon = 0;
     private float spawnTime;
 
