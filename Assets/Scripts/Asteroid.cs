@@ -7,11 +7,13 @@ using static UnityEngine.GridBrushBase;
 public class Asteroid : MonoBehaviour
 {
 
-    [SerializeField] private float asteroidSpeed = 3;
+    [SerializeField] private float asteroidSpeed;
+    private bool rotationActivate = true;
+    private float rotationDirection;
+    private float randomScale;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Colision detectada");
         if (collision.gameObject.CompareTag("XWing"))
         {
             Destroy(collision.gameObject);
@@ -23,13 +25,26 @@ public class Asteroid : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.CompareTag("AsteroidDestroyer"))
+        {
+            Destroy(gameObject);
+        }
+
     }
 
-    void Update()
+    
+    private void Update()
     {
+        if (rotationActivate)
+        {
+            rotationDirection = Random.Range(-80f, 80f);
+            randomScale = Random.Range(0.5f, 1.5f);
+            transform.localScale += new Vector3(randomScale, randomScale, 0);
+            rotationActivate = !rotationActivate;
+        }
 
         transform.position += new Vector3(0, -asteroidSpeed * Time.deltaTime, 0);
-        //transform.Rotate(0, 0, rotationDirection * Time.deltaTime);
+        transform.Rotate(0, 0, rotationDirection * Time.deltaTime);
         
     }
 }

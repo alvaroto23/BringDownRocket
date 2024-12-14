@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroid: {fileID: 4618886025375544650, guid: ff0224f802d82c0479f9cbccec23f785, type: 3}
-  spawningSpeed: 5
+  spawningSpeed: 10
 --- !u!4 &20027055
 Transform:
   m_ObjectHideFlags: 0
