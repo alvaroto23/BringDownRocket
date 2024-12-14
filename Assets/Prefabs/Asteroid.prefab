@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4618886025375544650}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9691, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,6 +103,7 @@ MonoBehaviour:
   asteroidSpeed: 3
   asteroidSound: {fileID: 7160556469979435462}
   asteroidExplosion: {fileID: 8300000, guid: 9b4a74e9ae7c83f499abe5a2cbc49e0f, type: 3}
+  reached: 0
 --- !u!82 &7160556469979435462
 AudioSource:
   m_ObjectHideFlags: 0

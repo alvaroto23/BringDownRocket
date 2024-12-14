@@ -11,6 +11,8 @@ public class Asteroid : MonoBehaviour
     [SerializeField] private AudioSource asteroidSound;
     [SerializeField] private AudioClip asteroidExplosion;
 
+    public bool reached = false;
+
     private bool rotationActivate = true;
     private float rotationDirection;
     private float randomScale;
@@ -19,13 +21,13 @@ public class Asteroid : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("XWing"))
         {
-
             asteroidSound.PlayOneShot(asteroidExplosion);
             Destroy(collision.gameObject);
         }
 
         if (collision.gameObject.CompareTag("Shoot"))
         {
+            reached = true;
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
