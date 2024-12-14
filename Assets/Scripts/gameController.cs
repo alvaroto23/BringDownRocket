@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private AudioMixer mixer;
     private bool pauseGame = false;
 
-    private void OnPauseAndPlay ()
+    private void OnPauseAndPlay()
     {
         pauseGame =! pauseGame;
         
